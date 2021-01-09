@@ -1,6 +1,8 @@
-function loadData() {
-    $.get('https://ci-swapi.herokuapp.com/api/', function(data, status) {
-        document.getElementById('demo').innerHTML = data;
-        console.log("Data: " + data + '/nStatus: ' + status);
+
+$(document).ready(function() {
+    $('button').click(function() {
+        $('#demo').load('https://ci-swapi.herokuapp.com/api/', function() {
+            console.log('Data: ' + data + '/nStatus: ' + status);
+        });
     });
-};
+});
