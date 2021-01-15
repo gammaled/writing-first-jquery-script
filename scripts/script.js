@@ -7,3 +7,12 @@
             document.getElementById('demo').innerHTML += JSON.stringify(item.name || item.title);
         };
     }; 
+
+    function getTableHeaders(obj) {
+        var tableHeaders = [];
+
+        Object.keys(obj).forEach(function() {
+            tabletHeaders.push(`<td>${key}</td>`)
+        });
+        document.getElementById('demo').innerHTML =`<tr>${tableHeaders}</tr>`;
+    }
